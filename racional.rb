@@ -44,3 +44,23 @@ class Fraccion
    	ff = Fraccion.new(f1.n - f2.n, f1.d)
    	reducir(ff.n,ff.d)
    end
+   
+   def producto(other)
+      f1 = reducir(@n,@d)
+   	f2 = reducir(other.n, other.d)
+      ff = Fraccion.new(f1.n * f2.n, f1.d * f2.d)
+      reducir(ff.n,ff.d)
+   end
+
+   def division(other)
+   	f1 = reducir(@n,@d)
+   	f2 = reducir(other.n, other.d)
+      ff = Fraccion.new(f1.n * f2.d, f1.d * f2.n)
+      reducir(ff.n,ff.d)
+   end
+
+   def ==(other)
+   	return @n == other.n && @d  == other.d if other.instance_of? Fraccion
+   	false
+   end
+end
