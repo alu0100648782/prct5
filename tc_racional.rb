@@ -1,4 +1,4 @@
-mplementar en este fichero las Pruebas Unitarias asociadas a la clase Fraccion
+# Implementar en este fichero las Pruebas Unitarias asociadas a la clase Fraccion
 
 require "./racional.rb"
 require "test/unit"
