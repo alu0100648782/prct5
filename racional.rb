@@ -28,3 +28,19 @@ class Fraccion
    		f2.d = mcm
    	end
    end
+   
+   def suma(other)
+   	f1 = reducir(@n,@d)
+   	f2 = reducir(other.n, other.d)
+   	sumayresta(other,f1,f2)
+   	ff = Fraccion.new(f1.n + f2.n, f1.d)
+   	reducir(ff.n,ff.d)
+   end
+
+   def resta(other)
+   	f1 = reducir(@n,@d)
+   	f2 = reducir(other.n, other.d)
+   	sumayresta(other,f1,f2)
+   	ff = Fraccion.new(f1.n - f2.n, f1.d)
+   	reducir(ff.n,ff.d)
+   end
