@@ -29,7 +29,7 @@ class Fraccion
    	end
    end
    
-   def suma(other)
+   def +(other)
    	f1 = reducir(@n,@d)
    	f2 = reducir(other.n, other.d)
    	sumayresta(other,f1,f2)
@@ -37,7 +37,7 @@ class Fraccion
    	reducir(ff.n,ff.d)
    end
 
-   def resta(other)
+   def -(other)
    	f1 = reducir(@n,@d)
    	f2 = reducir(other.n, other.d)
    	sumayresta(other,f1,f2)
@@ -45,7 +45,7 @@ class Fraccion
    	reducir(ff.n,ff.d)
    end
    
-   def producto(other)
+   def *(other)
       f1 = reducir(@n,@d)
    	f2 = reducir(other.n, other.d)
       ff = Fraccion.new(f1.n * f2.n, f1.d * f2.d)

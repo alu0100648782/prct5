@@ -10,15 +10,15 @@ class Test_Fraccion < Test::Unit::TestCase
 	end
 
 	def test_suma
-		assert_equal(Fraccion.new(203,15), @a.suma(@b))
+		assert_equal(Fraccion.new(203,15), @a.+(@b))
 	end
 
 	def test_resta
-		assert_equal(Fraccion.new(-73,15), @a.resta(@b))
+		assert_equal(Fraccion.new(-73,15), @a.-(@b))
 	end
 
 	def test_producto
-		assert_equal(Fraccion.new(598,15), @a.producto(@b))
+		assert_equal(Fraccion.new(598,15), @a.*(@b))
 	end
 
 	def test_division
